@@ -1,0 +1,18 @@
+<h1>Set Your Password</h1>
+<p>Note: your password must be at least 8 characters long, no space, and must have at least:
+    <ul>
+        <li>one lowercase letter (a-z),</li>
+        <li>one uppercase letter (A-Z),</li>
+        <li>one digit (0-9),</li>
+        <li>one symbol, e.g. a dollar sign.</li>
+    </ul>
+</p>
+<form method="POST" action="/auth/activate">
+    <input type="hidden" value="{{ .email }}" name="email">
+    <input type="hidden" value="{{ .tpw }}" name="tpw">
+    <table>
+        <tr><td>New Password:</td><td><input type="password" value="" name="password"></td></tr>
+        <tr><td>Repeat Password:</td><td><input type="password" value="" name="confirm"></td></tr>
+        <tr><td colspan="2" align="center"><button type="submit">Set Password</button></tr></tr>
+    </table>
+</form>
